@@ -30,3 +30,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/panther/panther:13/TQ3A.230901.001/10750268:user/release-keys
 
 $(call inherit-product, vendor/google/panther/panther-vendor.mk)
+
+$(call inherit-product, vendor/google/faceunlock/device.mk)
+
+$(call inherit-product, packages/apps/PixelParts/device.mk)
