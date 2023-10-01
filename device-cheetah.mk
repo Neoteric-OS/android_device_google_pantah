@@ -94,6 +94,15 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config
 # TODO: b/250788756 - the property will be phased out after HWC loads user-preferred mode
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.preferred_mode=1080x2340@120
 
+# LMKD
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.lmkd.nstrat_wmark_boost_factor=4
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.lmkd.psi_scrit_complete_stall_ms=400
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.lmk.kill_heaviest_task=true
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.lmk.filecache_min_kb=153600
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.lmk.kill_timeout_ms=50
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.lmk.thrashing_limit_critical=30
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.lmk.thrashing_limit_decay=5
+
 # NFC
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
