@@ -14,6 +14,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     EuiccSupportPixelOverlay
 
+# ESIM
+HAS_ESIM := true
+
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
 
